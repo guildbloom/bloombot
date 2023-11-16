@@ -1,0 +1,26 @@
+{
+  "name": "functions",
+  "private": true,
+  "scripts": {
+    "build": "vite build --ssr",
+    "watch": "nodemon --watch src --ext ts --exec npm run serve",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "logs": "firebase functions:log"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
+  "dependencies": {
+    "axios": "^1.6.1",
+    "discord.js": "^14.14.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  }
+}

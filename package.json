@@ -1,0 +1,24 @@
+{
+  "workspaces": [
+    "functions"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "npm run build -ws",
+    "build-functions": "npm run build -w functions",
+    "local-setup": "npm install -g firebase-tools",
+    "local-deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.201",
+    "concurrently": "^8.2.2",
+    "lerna": "^7.4.2",
+    "nodemon": "^3.0.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

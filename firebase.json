@@ -1,0 +1,24 @@
+{
+  "functions": [
+    {
+      "source": "dist/functions",
+      "codebase": "bloombot",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": ["npm run build -w functions"]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5002
+    },
+    "ui": {
+      "enabled": false
+    },
+    "singleProjectMode": true
+  }
+}

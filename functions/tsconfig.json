@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "./global.d.ts"],
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": ["src", "vite.config.ts"]
+}
