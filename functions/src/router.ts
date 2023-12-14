@@ -4,7 +4,7 @@ import placeholderController from "./controllers/placeholderController";
 const router = Router();
 
 router.get("/ping", (r, res) => {
-  res.send("Pong!");
+  res.json("Pong!");
 });
 
 router.use(placeholderController);

@@ -7,7 +7,7 @@ import { defineSecret } from "firebase-functions/params";
 import { SecretParam } from "firebase-functions/lib/params/types";
 import { setGlobalOptions } from "firebase-functions/v2/options";
 
-setGlobalOptions({ maxInstances: 10 });
+setGlobalOptions({ minInstances: 1, maxInstances: 10 });
 
 const localServiceAccount = import.meta.env.FUNC_SERVICE_ACCOUNT === "LOCAL";
 

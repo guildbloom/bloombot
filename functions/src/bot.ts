@@ -60,12 +60,17 @@ client.on("ready", (c) => {
 });
 
 client.on("interactionCreate", async (interaction) => {
-  console.log(interaction.toJSON());
+  console.info(interaction.toJSON());
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === "ping") {
-    logger.info("Ping pong");
-    await interaction.reply("Pong!");
+  if (interaction.commandName === "status") {
+    logger.info("Operational status");
+    try {
+      await interaction.deferReply();
+      await interaction.editReply("Operational!");
+    } catch (err) {
+      logger.error(err);
+    }
   }
 });
 
